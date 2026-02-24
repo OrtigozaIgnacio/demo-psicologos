@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import os
 from datetime import datetime, timedelta, time
 
+
 app = Flask(__name__, static_folder='../frontend', static_url_path='', template_folder='../frontend')
 
 # --- VARIABLES DINÁMICAS (MODO DEMO) ---
