@@ -1,1 +1,20 @@
-render.yaml
+services:
+  - type: web
+    name: demo-turnos-psicologos
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.main:app
+    envVars:
+      - key: BASE_URL
+        sync: false # Deberás completar este valor manualmente en el dashboard de Render una vez generado
+      - key: NOMBRE_PROFESIONAL
+        value: "Lic. María Gómez"
+      - key: ESPECIALIDAD
+        value: "Psicología Clínica"
+      - key: HORA_INICIO_LABORAL
+        value: "9"
+      - key: HORA_FIN_LABORAL
+        value: "18"
+      - key: DURACION_SESION
+        value: "60"
