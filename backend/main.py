@@ -2,11 +2,9 @@ from flask import Flask, request, jsonify, render_template
 import os
 from datetime import datetime, timedelta, time
 
-
 app = Flask(__name__, static_folder='../frontend', static_url_path='', template_folder='../frontend')
 
-# --- VARIABLES DINÁMICAS (MODO DEMO) ---
-# Usamos nombres genéricos de ejemplo para que los psicólogos lo vean en acción
+# --- VARIABLES DINÁMICAS (MODO DEMO - ESPAÑOL) ---
 NOMBRE_PROFESIONAL = os.environ.get("NOMBRE_PROFESIONAL", "Lic. María Gómez")
 ESPECIALIDAD = os.environ.get("ESPECIALIDAD", "Psicología Clínica")
 
@@ -65,12 +63,26 @@ def crear_turno():
         "message": "Simulación completada. Mostrar modal de venta."
     }), 200
 
+# --- RUTAS DE FRONTEND ---
+
+# 1. Ruta Original (Mercado Hispano / Argentina)
 @app.route('/')
 def index():
     return render_template(
         'index.html', 
         nombre=NOMBRE_PROFESIONAL, 
         especialidad=ESPECIALIDAD
+    )
+
+# 2. NUEVA Ruta Internacional (Mercado Estados Unidos)
+@app.route('/en')
+@app.route('/en/')
+def index_en():
+    # Usamos variables en inglés para que la demo impacte al cliente de EE. UU.
+    return render_template(
+        'en/index.html', 
+        nombre=os.environ.get("NOMBRE_PROFESIONAL_EN", "Dr. John Doe"), 
+        especialidad=os.environ.get("ESPECIALIDAD_EN", "Psychiatrist")
     )
 
 if __name__ == '__main__':
