@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ especialidad }} | {{ nombre }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .gradient-text { 
+        background: linear-gradient(90deg, #2dd4bf, #3b82f6); 
+        -webkit-background-clip: text;
+        background-clip: text; 
+        -webkit-text-fill-color: transparent; }
+        .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; opacity: 0; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <section class="min-h-screen flex items-center justify-center bg-slate-900 text-white px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#2dd4bf_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        <div class="max-w-4xl text-center z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Reclaiming your <span class="gradient-text">peace of mind</span> is possible</h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed">
+                A safe, confidential, and judgment-free therapeutic space. I will help you untangle your emotions, manage <strong>anxiety</strong>, and build the tools for a more balanced life.
+            </p>
+            <button onclick="scrollToSection('agendar')" class="bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold py-4 px-10 rounded-full text-lg shadow-lg transition-all transform hover:scale-105">
+                View Availability
+            </button>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Why choose professional mental health support?</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="p-8 bg-white border border-slate-200 rounded-3xl">
+                <h3 class="text-xl font-bold mb-6 text-red-500 flex items-center gap-2"><i data-lucide="alert-triangle"></i> Ignoring the Symptoms</h3>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 text-slate-600 border-b pb-2"><span class="text-red-500 font-bold">✕</span> Waiting for "time to magically heal everything".</li>
+                    <li class="flex gap-3 text-slate-600 border-b pb-2"><span class="text-red-500 font-bold">✕</span> Bottling things up for fear of being a burden to others.</li>
+                    <li class="flex gap-3 text-slate-600 border-b pb-2"><span class="text-red-500 font-bold">✕</span> Normalizing living with chronic stress, distress, or insomnia.</li>
+                    <li class="flex gap-3 text-slate-600"><span class="text-red-500 font-bold">✕</span> Seeking quick, generic answers on social media.</li>
+                </ul>
+            </div>
+            <div class="p-8 bg-slate-900 text-white rounded-3xl shadow-2xl ring-4 ring-teal-500/20">
+                <h3 class="text-xl font-bold mb-6 text-teal-400 flex items-center gap-2"><i data-lucide="brain-circuit"></i> Starting Therapy</h3>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 text-slate-300 border-b border-slate-700 pb-2"><span class="text-teal-400 font-bold">✓</span> A 100% dedicated space for you, with active listening.</li>
+                    <li class="flex gap-3 text-slate-300 border-b border-slate-700 pb-2"><span class="text-teal-400 font-bold">✓</span> Scientifically validated tools to manage your emotions.</li>
+                    <li class="flex gap-3 text-slate-300 border-b border-slate-700 pb-2"><span class="text-teal-400 font-bold">✓</span> Identifying unconscious patterns that are holding you back.</li>
+                    <li class="flex gap-3 text-slate-300"><span class="text-teal-400 font-bold">✓</span> Developing healthier and more assertive relationships.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-100 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 italic text-slate-800">"Taking the first step toward therapy is the greatest act of courage to transform your life."</h2>
+            <div class="bg-white p-10 rounded-3xl shadow-sm text-lg text-slate-600 leading-relaxed text-left">
+                <p class="mb-6">We often normalize emotional distress, thinking "it will pass" or that we can handle everything alone. Therapy isn't just for those who "have problems"; it's for those who decide to solve them and truly know themselves.</p>
+                <p>In this space, we will work together to identify the patterns that limit you and develop the internal resources needed so you can live a fuller, more conscious life, free from external pressures.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="w-64 h-64 bg-slate-300 rounded-2xl overflow-hidden shadow-xl flex-shrink-0">
+                <img src="../terapeuta-en.jpeg" alt="{{ nombre }} - {{ especialidad }}" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold mb-4">My Clinical Approach</h2>
+                <p class="text-xl text-teal-600 font-semibold mb-4">{{ especialidad }} with a clinical focus.</p>
+                <p class="text-slate-600 mb-6 italic">"I am {{ nombre }}. I guide you through a safe, confidential, and dialogue-based therapeutic process to help you overcome anxiety, distress, and daily relationship challenges. My goal is to help you build your own well-being."</p>
+                <div class="flex gap-4">
+                    <span class="bg-white px-4 py-2 rounded-full border border-slate-200 text-sm font-bold shadow-sm">Telehealth</span>
+                    <span class="bg-white px-4 py-2 rounded-full border border-slate-200 text-sm font-bold shadow-sm">100% Confidential</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-900 text-white px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-slate-800 rounded-3xl">
+                <div class="text-teal-400 mb-4 font-bold text-4xl leading-none">"</div>
+                <p class="mb-6 text-slate-300">I felt like anxiety was taking over my days. Through our sessions, I finally understood my triggers and now have the tools to manage it. A turning point in my personal and professional life.</p>
+                <p class="font-bold">Sophia T. - Designer</p>
+            </div>
+            <div class="p-8 bg-slate-800 rounded-3xl">
+                <div class="text-teal-400 mb-4 font-bold text-4xl leading-none">"</div>
+                <p class="mb-6 text-slate-300">I struggled to set boundaries at work and ended up burnt out. This space helped me prioritize myself without feeling guilty and communicate much more assertively.</p>
+                <p class="font-bold">Martin L. - Data Analyst</p>
+            </div>
+            <div class="p-8 bg-slate-800 rounded-3xl">
+                <div class="text-teal-400 mb-4 font-bold text-4xl leading-none">"</div>
+                <p class="mb-6 text-slate-300">I started therapy because I felt stuck in my relationships. {{ nombre }} provided a judgment-free listening space that allowed me to heal old wounds and move forward.</p>
+                <p class="font-bold">Camila G. - Teacher</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+            <details class="group bg-white p-6 rounded-2xl border border-slate-200">
+                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-slate-800">
+                    How do online sessions (Telehealth) work?
+                    <span class="group-open:rotate-180 transition-transform">↓</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Sessions are conducted via secure video calls (Google Meet or Zoom). They work exactly like in-person sessions: you just need a private space, a good internet connection, and commitment to your process.</p>
+            </details>
+            <details class="group bg-white p-6 rounded-2xl border border-slate-200">
+                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-slate-800">
+                    How long is each session and how often do we meet?
+                    <span class="group-open:rotate-180 transition-transform">↓</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Sessions last between 45 and 50 minutes. We typically start with a weekly frequency to establish the therapeutic bond, and then evaluate based on your progress and needs.</p>
+            </details>
+            <details class="group bg-white p-6 rounded-2xl border border-slate-200">
+                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-slate-800">
+                    Is it normal to feel nervous before the first session?
+                    <span class="group-open:rotate-180 transition-transform">↓</span>
+                </summary>
+                <p class="mt-4 text-slate-600">Absolutely. It is very common to feel uncertainty or anxiety when starting. The first session is an intake interview to get to know each other, understand what brings you to therapy, and see if we are a good fit. There are no right or wrong answers.</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="agendar" class="py-24 bg-teal-50 px-6">
+        <div class="max-w-xl mx-auto">
+            <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl border border-teal-100">
+                <h2 class="text-3xl font-bold text-center mb-8">Schedule Your Session</h2>
+
+                <div class="flex justify-center gap-4 mb-8">
+                    <button onclick="cambiarServicio('fisico')" id="btn-fisico" class="flex-1 py-4 px-6 rounded-xl border-2 transition flex flex-col items-center gap-2 group bg-teal-50 border-teal-500 text-teal-700 shadow-sm">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                        <span class="font-bold text-sm uppercase tracking-wider">Individual Session</span>
+                        <span class="text-xs text-slate-500 font-medium">Psychotherapy</span>
+                    </button>
+                    
+                    <button onclick="cambiarServicio('consulta')" id="btn-consulta" class="flex-1 py-4 px-6 rounded-xl border-2 border-slate-100 text-slate-400 hover:border-blue-300 hover:bg-blue-50 transition flex flex-col items-center gap-2 group">
+                        <i data-lucide="message-square" class="w-6 h-6 group-hover:text-blue-500"></i>
+                        <span class="font-bold text-sm uppercase tracking-wider group-hover:text-blue-600">Intake Call</span>
+                        <span class="text-xs text-slate-400 font-medium">15 min - Free</span>
+                    </button>
+                </div>
+
+                <div id="step-dates" class="mb-8">
+                    <label class="block font-bold mb-4 text-slate-500 uppercase text-xs tracking-widest">1. Select a Time</label>
+                    
+                    <div id="loading-slots" class="text-center py-8">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500 mx-auto mb-2"></div>
+                        <p class="text-slate-500 text-sm">Checking availability...</p>
+                    </div>
+
+                    <div id="slots-container" class="flex flex-col gap-6 hidden"></div>
+
+                    <div id="load-more-container" class="mt-8 text-center hidden">
+                        <button type="button" onclick="renderNextDays()" class="inline-flex items-center gap-2 text-teal-600 font-bold hover:text-teal-700 transition px-6 py-2 border border-teal-200 rounded-full hover:bg-teal-50">
+                            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                            View more available times
+                        </button>
+                    </div>
+                </div>
+
+                <form id="booking-form" class="hidden space-y-4" onsubmit="submitForm(event)">
+                    <label class="block font-bold mb-2 text-slate-500 uppercase text-xs tracking-widest border-t pt-6">2. Patient Intake Form</label>
+                    <input type="text" id="nombre" placeholder="Full Name" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:ring-2 focus:ring-teal-500">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="number" id="edad" placeholder="Age" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none">
+                        <input type="number" id="nivel_dolor" placeholder="Distress Level (1-10)" min="1" max="10" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none">
+                    </div>
+                    <textarea id="descripcion" placeholder="Brief reason for visit..." rows="3" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none"></textarea>
+                    <input type="email" id="email" placeholder="Email Address" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none">
+                    <input type="tel" id="telefono" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none">
+                    
+                    <div id="mp-notice" class="bg-blue-50 border border-blue-100 p-4 rounded-xl flex items-start gap-3 animate-fade-in">
+                        <i data-lucide="credit-card" class="w-5 h-5 text-blue-500 mt-0.5"></i>
+                        <p class="text-sm text-blue-700 leading-snug">
+                            Upon confirming, you will be securely redirected to <strong>Stripe</strong> to complete the session payment and secure your booking.
+                        </p>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-slate-900 text-white font-bold py-5 rounded-xl shadow-xl hover:bg-black transition">
+                        Pay & Secure Booking
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="demo-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-slate-900/80 backdrop-blur-sm animate-fade-in">
+        <div class="bg-white p-8 md:p-10 rounded-3xl max-w-md w-full mx-4 shadow-2xl relative border border-teal-100 transform transition-all">
+            <button type="button" onclick="cerrarModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 focus:outline-none">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i data-lucide="rocket" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-center text-slate-900 mb-4">Demo Simulation Complete!</h3>
+            <p class="text-slate-600 text-center mb-6 leading-relaxed">
+                In your live website, the patient is securely redirected to <strong>Stripe</strong> at this exact moment.
+            </p>
+            <div class="bg-teal-50 rounded-xl p-4 mb-8">
+                <p class="text-sm text-teal-800 flex items-start gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0 mt-0.5"></i>
+                    <span>Once the session fee is paid, the appointment is automatically locked in your <strong>Google Calendar</strong> and you receive a notification.</span>
+                </p>
+            </div>
+            <p class="text-center font-bold text-slate-800 mb-6">Can you imagine your practice running like this?</p>
+            
+            <a href="https://wa.me/5491176333147?text=Hi%20Ignacio,%20I%20was%20testing%20the%20booking%20system%20demo%20and%20I'm%20interested%20in%20learning%20more%20for%20my%20private%20practice." 
+               target="_blank" 
+               class="w-full flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:scale-105">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Let's chat on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        let turnosAgrupados = []; 
+        let diasMostrados = 0;    
+        const BLOQUE_DIAS = 7;    
+        let servicioActual = 'fisico'; 
+
+        function scrollToSection(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+
+        function cerrarModal() {
+            document.getElementById('demo-modal').classList.add('hidden');
+        }
+
+        async function loadSlots() {
+            const container = document.getElementById('slots-container');
+            const loader = document.getElementById('loading-slots');
+            const loadMoreBtn = document.getElementById('load-more-container');
+            
+            loader.classList.remove('hidden');
+            container.classList.add('hidden');
+            loadMoreBtn.classList.add('hidden');
+            
+            try {
+                const response = await fetch(`/api/disponibilidad?servicio=${servicioActual}`);
+                const data = await response.json();
+                
+                loader.classList.add('hidden');
+                container.classList.remove('hidden');
+                
+                if(!data.slots_disponibles || data.slots_disponibles.length === 0) {
+                    container.innerHTML = '<div class="w-full text-center py-6 bg-slate-50 rounded-lg text-slate-500">No upcoming appointments available.</div>';
+                    return;
+                }
+
+                const mapeo = {};
+                data.slots_disponibles.forEach(slot => {
+                    const dateObj = new Date(slot);
+                    // Cambiado a en-US para el formato de fecha en inglés
+                    const fechaStr = dateObj.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long' });
+                    const fechaCap = fechaStr.charAt(0).toUpperCase() + fechaStr.slice(1);
+                    
+                    if (!mapeo[fechaCap]) mapeo[fechaCap] = [];
+                    mapeo[fechaCap].push({
+                        iso: slot,
+                        // Cambiado a en-US para el formato de hora (AM/PM)
+                        hora: dateObj.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+                    });
+                });
+
+                turnosAgrupados = Object.keys(mapeo).map(dia => ({ dia, turnos: mapeo[dia] }));
+                diasMostrados = 0;
+                container.innerHTML = ''; 
+                renderNextDays();
+
+            } catch (e) { 
+                console.error(e);
+                loader.classList.add('hidden');
+                container.innerHTML = '<p class="text-red-500 text-center font-bold">Connection error.</p>';
+            }
+        }
+
+        function renderNextDays() {
+            const container = document.getElementById('slots-container');
+            const loadMoreContainer = document.getElementById('load-more-container');
+            
+            const siguienteBloque = turnosAgrupados.slice(diasMostrados, diasMostrados + BLOQUE_DIAS);
+            
+            siguienteBloque.forEach(item => {
+                const dayGroup = document.createElement('div');
+                dayGroup.className = "border-b border-slate-100 pb-6 last:border-0 animate-fade-in";
+                
+                dayGroup.innerHTML = `
+                    <h4 class="font-bold text-slate-700 mb-4 flex items-center gap-2 text-lg">
+                        <i data-lucide="calendar" class="w-4 h-4 text-teal-500"></i> ${item.dia}
+                    </h4>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                        ${item.turnos.map(t => `
+                            <button type="button" onclick="selectSlot('${t.iso}', this)" 
+                                    class="py-3 px-2 border-2 border-slate-100 bg-white text-slate-700 font-bold rounded-xl hover:border-teal-400 hover:bg-teal-50 transition focus:outline-none">
+                                ${t.hora}
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(dayGroup);
+            });
+
+            diasMostrados += BLOQUE_DIAS;
+            lucide.createIcons();
+
+            if (diasMostrados < turnosAgrupados.length) {
+                loadMoreContainer.classList.remove('hidden');
+            } else {
+                loadMoreContainer.classList.add('hidden');
+            }
+        }
+        
+        function selectSlot(slot, btn) {
+            document.getElementById('selected-date').value = slot;
+            document.getElementById('booking-form').classList.remove('hidden');
+            
+            const allBtns = document.querySelectorAll('#slots-container button');
+            allBtns.forEach(b => {
+                b.classList.remove('bg-teal-600', 'text-white', 'border-teal-600', 'ring-2', 'ring-teal-300', 'scale-105');
+                b.classList.add('border-slate-100', 'text-slate-400', 'opacity-60', 'scale-95');
+            });
+
+            btn.classList.remove('border-slate-100', 'text-slate-400', 'opacity-60', 'scale-95');
+            btn.classList.add('bg-teal-600', 'text-white', 'border-teal-600', 'ring-2', 'ring-teal-300', 'scale-105');
+            
+            document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        async function submitForm(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const originalText = "Pay & Secure Booking"; 
+            
+            btn.disabled = true;
+            btn.innerHTML = '<div class="animate-spin rounded-full h-5 w-5 border-b-2 border-white mx-auto"></div>';
+
+            const data = {
+                nombre: document.getElementById('nombre').value,
+                edad: parseInt(document.getElementById('edad').value),
+                email: document.getElementById('email').value,
+                telefono: document.getElementById('telefono').value,
+                descripcion_dolor: document.getElementById('descripcion').value,
+                nivel_dolor: parseInt(document.getElementById('nivel_dolor').value),
+                fecha_hora_inicio: document.getElementById('selected-date').value,
+                servicio: servicioActual 
+            };
+
+            try {
+                const res = await fetch('/api/agendar', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+
+                const result = await res.json();
+
+                if (res.ok && result.status === "demo") {
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                    document.getElementById('demo-modal').classList.remove('hidden');
+                } else {
+                    alert("Error: " + (result.error || "Please try again"));
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Connection error.");
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        }
+
+        function cambiarServicio(servicio) {
+            servicioActual = servicio;
+            
+            const btnFisico = document.getElementById('btn-fisico');
+            const btnConsulta = document.getElementById('btn-consulta');
+            const mpNotice = document.getElementById('mp-notice');
+            
+            const activeSesion = "bg-teal-50 border-teal-500 text-teal-700 shadow-sm";
+            const activeConsulta = "bg-blue-50 border-blue-500 text-blue-700 shadow-sm";
+            const inactive = "border-slate-100 text-slate-400 hover:border-gray-300";
+
+            btnFisico.className = "flex-1 py-4 px-6 rounded-xl border-2 transition flex flex-col items-center gap-2 group " + 
+                                  (servicio === 'fisico' ? activeSesion : inactive);
+            
+            btnConsulta.className = "flex-1 py-4 px-6 rounded-xl border-2 transition flex flex-col items-center gap-2 group " + 
+                                    (servicio === 'consulta' ? activeConsulta : inactive);
+
+            if (servicio === 'fisico') {
+                mpNotice.classList.remove('hidden');
+            } else {
+                mpNotice.classList.add('hidden');
+            }
+
+            document.getElementById('booking-form').classList.add('hidden');
+            document.getElementById('selected-date').value = "";
+            
+            loadSlots();
+        }
+        
+        loadSlots();
+    </script>
+    <input type="hidden" id="selected-date">
+</body>
+</html>
